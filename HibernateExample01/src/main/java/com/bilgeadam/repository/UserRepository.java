@@ -21,6 +21,7 @@ public class UserRepository {
     public UserRepository() {
         entityManager = HibernateUtils.getSessionFactory().createEntityManager();
         criteriaBuilder = entityManager.getCriteriaBuilder();
+
     }
 
     public List<User> findAll() {
