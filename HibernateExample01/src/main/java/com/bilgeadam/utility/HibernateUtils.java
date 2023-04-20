@@ -1,5 +1,6 @@
 package com.bilgeadam.utility;
 
+import com.bilgeadam.entity.Post;
 import com.bilgeadam.entity.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -13,6 +14,8 @@ public class HibernateUtils {
         try {
             Configuration configuration = new Configuration();
             configuration.addAnnotatedClass(User.class); //mapping - hibernate.cfg.xml dosyasında mapping yapmak yerine bu da yapılabilir.
+            configuration.addAnnotatedClass(Post.class);
+
             SessionFactory sessionFactory = configuration.configure("hibernate.cfg.xml").buildSessionFactory();
             return sessionFactory;
         }catch(Exception exception){
