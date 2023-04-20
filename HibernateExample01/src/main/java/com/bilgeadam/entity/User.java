@@ -91,4 +91,36 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public Information getInformation() {
+        return information;
+    }
+
+    public void setInformation(Information information) {
+        this.information = information;
+    }
+
+    public List<String> getInterests() {
+        return interests;
+    }
+
+    public void setInterests(List<String> interests) {
+        this.interests = interests;
+    }
+
+    public EGender geteGender() {
+        return eGender;
+    }
+
+    public void seteGender(EGender eGender) {
+        this.eGender = eGender;
+    }
+
+    public Map<AddressType, Address> getAddress() {
+        return address;
+    }
+
+    public void setAddress(Map<AddressType, Address> address) {
+        this.address = address;
+    }
 }

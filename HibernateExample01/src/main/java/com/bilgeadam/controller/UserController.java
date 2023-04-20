@@ -6,8 +6,6 @@ import com.bilgeadam.utility.HibernateUtils;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import javax.persistence.EntityManager;
-import javax.persistence.criteria.CriteriaBuilder;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -19,7 +17,13 @@ public class UserController {
         // createUser();
 
         UserRepository userRepository = new UserRepository();
-        userRepository.findAll().forEach(System.out::println);;
+       // userRepository.findAll().forEach(System.out::println);
+
+       // userRepository.findAllUserInformation().forEach(System.out::println);
+       // userRepository.findAllInformationByName().forEach(System.out::println);
+       // userRepository.findAllNativeQuery().forEach(System.out::println);
+        User user = userRepository.findById(2L);
+        System.out.println(user.getUsername()+ " "+ user.getInformation().getMiddleName());
     }
 
     public static void createUser() {
